@@ -1,10 +1,15 @@
 [general]
 name = "quantization-eetq"
+license = "Apache-2.0"
 version = 1
 backends = ["cuda"]
 
 [general.cuda]
 maxver = "12.9"
+
+
+[general.hub]
+repo-id = "kernels-community/quantization-eetq"
 
 [torch]
 src = [

@@ -1,11 +1,16 @@
 [general]
 name = "megablocks"
+license = "Apache-2.0"
 version = 1
 backends = [
     "cuda",
     "xpu",
     "cpu",
 ]
+
+
+[general.hub]
+repo-id = "kernels-community/megablocks"
 
 [torch]
 src = [
@@ -53,7 +58,7 @@ src = [
 backend = "xpu"
 depends = [
     "torch",
-    "cutlass_sycl",
+    "sycl_tla",
 ]
 src = [
     "csrc_xpu/utils.h",

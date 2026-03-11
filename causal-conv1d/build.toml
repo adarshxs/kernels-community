@@ -1,7 +1,12 @@
 [general]
 name = "causal-conv1d"
+license = "BSD-3-Clause"
 version = 1
 backends = ["cuda"]
+
+
+[general.hub]
+repo-id = "kernels-community/causal-conv1d"
 
 [torch]
 src = [

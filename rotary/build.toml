@@ -1,10 +1,15 @@
 [general]
 name = "rotary"
+license = "BSD-3-Clause"
 version = 1
 backends = [
     "cuda",
     "xpu",
 ]
+
+
+[general.hub]
+repo-id = "kernels-community/rotary"
 
 [torch]
 src = ["torch-ext/torch_binding.cpp"]

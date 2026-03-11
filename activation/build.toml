@@ -1,7 +1,12 @@
 [general]
 name = "activation"
+license = "Apache-2.0"
 version = 1
 backends = ["cuda", "metal"]
+
+
+[general.hub]
+repo-id = "kernels-community/activation"
 
 [torch]
 src = [

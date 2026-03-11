@@ -1,10 +1,15 @@
 [general]
 name = "vllm-flash-attn3"
+license = "Apache-2.0"
 version = 1
 backends = ["cuda"]
 
 [general.cuda]
 minver = "12.8"
+
+
+[general.hub]
+repo-id = "kernels-community/vllm-flash-attn3"
 
 [torch]
 src = [

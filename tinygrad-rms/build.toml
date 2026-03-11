@@ -1,7 +1,12 @@
 [general]
 name = "tinygrad-rms"
+license = "MIT"
 version = 1
 backends = ["cuda"]
+
+
+[general.hub]
+repo-id = "kernels-community/tinygrad-rms"
 
 [torch]
 src = [

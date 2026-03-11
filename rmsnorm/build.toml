@@ -1,10 +1,15 @@
 [general]
 name = "rmsnorm"
+license = "Apache-2.0"
 version = 1
 backends = [
     "cpu",
     "xpu",
 ]
+
+
+[general.hub]
+repo-id = "kernels-community/rmsnorm"
 
 [torch]
 src = ["torch-ext/torch_binding.cpp"]

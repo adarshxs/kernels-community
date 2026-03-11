@@ -1,8 +1,12 @@
 [general]
 name = "fp8-fbgemm"
+license = "BSD-3-Clause"
 version = 1
 backends = [
     "cuda",
     "rocm",
     "xpu",
 ]
+
+[general.hub]
+repo-id = "kernels-community/fp8-fbgemm"
