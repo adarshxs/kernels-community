@@ -38,12 +38,17 @@ def main() -> None:
     print("revision:", args.revision)
     print("iters:", args.iters)
 
-    kernel = get_kernel(
-        args.repo_id,
-        revision=args.revision,
-        backend="cpu",
-        trust_remote_code=True,
-    )
+    try:
+        kernel = get_kernel(
+            args.repo_id,
+            revision=args.revision,
+            backend="cpu",
+            trust_remote_code=True,
+        )
+    except TypeError as exc:
+        if "trust_remote_code" not in str(exc):
+            raise
+        kernel = get_kernel(args.repo_id, revision=args.revision, backend="cpu")
     x = torch.randn(1024, dtype=torch.float32)
     out, digest = kernel.relu_and_probe(x, iters=args.iters)
 
