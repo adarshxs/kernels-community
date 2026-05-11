@@ -1,0 +1,19 @@
+[general]
+name = "stdlib-repro"
+license = "Apache-2.0"
+version = 1
+backends = ["cpu"]
+
+[general.hub]
+repo-id = "adarshxs/stdlib-repro"
+
+[torch]
+src = [
+    "torch-ext/torch_binding.cpp",
+    "torch-ext/torch_binding.h",
+]
+
+[kernel.stdlib_repro_cpu]
+backend = "cpu"
+depends = ["torch"]
+src = ["stdlib_repro_cpu/stdlib_repro_cpu.cpp"]
